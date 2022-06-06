@@ -13,8 +13,8 @@ public class Ellipse extends Shape{
         this.horizontalRadius = Objects.requireNonNull(horizontalRadius);
         this.verticalRadius = Objects.requireNonNull(verticalRadius);
 
-        if(this.horizontalRadius == 0 || this.verticalRadius == 0){
-            throw new RuntimeException("An ellipse cannot have an area of 0.");
+        if(this.horizontalRadius < 0 || this.verticalRadius < 0){
+            throw new RuntimeException("An ellipse cannot have a radius of 0 or less.");
         }
     }
 

@@ -6,7 +6,12 @@ public class Pentagon extends Shape {
 
     public Pentagon(Point center, Double radius){
         this.center = center;
-        this.radius = radius;
+        if(radius > 0.0){
+            this.radius = radius;
+        }
+        else{
+            throw new RuntimeException("A pentagon cannot have a radius of 0 or less.");
+        }
     }
 
     private Double getBase(){

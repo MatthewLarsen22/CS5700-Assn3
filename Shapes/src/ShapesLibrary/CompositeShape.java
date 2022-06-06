@@ -34,6 +34,7 @@ public class CompositeShape extends Shape {
         return area;
     }
 
+    @Override
     public void move(Double deltaX, Double deltaY){
         for (Shape shape : shapes){
             shape.move(deltaX, deltaY);
