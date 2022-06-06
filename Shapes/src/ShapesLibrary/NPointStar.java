@@ -6,7 +6,7 @@ public class NPointStar extends Shape{
     private Double innerRadius;
     private Double outerRadius;
 
-    public NPointStar(int numPoints, Point center, Double innerRadius, Double outerRadius){
+    public NPointStar(Point center, int numPoints, Double innerRadius, Double outerRadius){
         if (numPoints < 3){
             throw new RuntimeException("An N-point star must have at least 3 points");
         }
@@ -40,15 +40,15 @@ public class NPointStar extends Shape{
 
     @Override
     public Double getArea() {
-        Double theta = (360.0 / (2 * numPoints));
+        Double theta = (2 * Math.PI / (2 * numPoints));
 
-        Point pointA = this.center;
+        Point pointA = this.center.clone();
 
-        Point pointB = this.center;
+        Point pointB = this.center.clone();
         pointB.move(0.0, outerRadius);
 
-        Point pointC = this.center;
-        pointC.move(innerRadius * Math.cos(90 - theta), innerRadius * Math.sin(90 - theta));
+        Point pointC = this.center.clone();
+        pointC.move(innerRadius * Math.cos((Math.PI / 2) - theta), innerRadius * Math.sin((Math.PI / 2) - theta));
 
         Triangle triangle = new Triangle(pointA, pointB, pointC);
 

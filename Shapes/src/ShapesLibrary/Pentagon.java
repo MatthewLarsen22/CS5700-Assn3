@@ -15,11 +15,11 @@ public class Pentagon extends Shape {
     }
 
     private Double getBase(){
-        return 2 * radius * Math.sin(36);
+        return Math.sqrt(Math.pow(radius * Math.cos(Math.PI/10), 2) + Math.pow(radius - radius * Math.sin(Math.PI/10), 2));
     }
 
-    private Double getApothem(){
-        return radius * Math.cos(36);
+    private Double getApothem(Double base){
+        return base / (2 * Math.tan(Math.PI/5));
     }
 
     public Point getCenter() {
@@ -32,7 +32,9 @@ public class Pentagon extends Shape {
 
     @Override
     public Double getArea() {
-        return 2.5 * getBase() * getApothem();
+        Double base = getBase();
+        System.out.println(base);
+        return 2.5 * base * getApothem(base);
     }
 
     @Override
