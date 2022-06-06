@@ -1,7 +1,7 @@
-import java.util.Objects;
+package ShapesLibrary;
 
 public class Square extends Rectangle{
-    Square(Point pointA, Point pointB) {
+    public Square(Point pointA, Point pointB) {
         super(pointA, pointB);
 
         Double length = Math.abs(this.getPointB().getX() - this.getPointA().getX());

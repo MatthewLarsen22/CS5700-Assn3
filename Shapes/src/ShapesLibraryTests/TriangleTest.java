@@ -1,6 +1,7 @@
-import org.junit.jupiter.api.Test;
+package ShapesLibraryTests;
 
-import java.util.function.DoublePredicate;
+import ShapesLibrary.*;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,10 +1,12 @@
+package ShapesLibrary;
+
 import java.util.Objects;
 
 public class Rectangle extends Shape{
     private Point pointA;
     private Point pointB;
 
-    Rectangle(Point pointA, Point pointB){
+    public Rectangle(Point pointA, Point pointB){
         this.pointA = Objects.requireNonNull(pointA);
         this.pointB = Objects.requireNonNull(pointB);
 

@@ -1,6 +1,8 @@
+package ShapesLibrary;
+
 import java.util.Objects;
 
-public class Point {
+public class Point implements Moveable{
     private Double x;
     private Double y;
 
@@ -21,6 +23,7 @@ public class Point {
         return new Point(this.x, this.y);
     }
 
+    @Override
     public void move(Double deltaX, Double deltaY){
         this.x += deltaX;
         this.y += deltaY;

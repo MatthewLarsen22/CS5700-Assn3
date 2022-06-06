@@ -1,6 +1,8 @@
+package ShapesLibrary;
+
 import java.util.Objects;
 
-public class Line {
+public class Line implements Moveable{
     private Point leftPoint;
     private Point rightPoint;
 
@@ -46,6 +48,7 @@ public class Line {
         return Math.sqrt((rise * rise) + (run * run));
     }
 
+    @Override
     public void move(Double deltaX, Double deltaY){
         leftPoint.move(deltaX, deltaY);
         rightPoint.move(deltaX, deltaY);

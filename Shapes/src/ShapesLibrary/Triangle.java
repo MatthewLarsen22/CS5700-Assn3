@@ -1,3 +1,5 @@
+package ShapesLibrary;
+
 import java.util.Objects;
 
 public class Triangle extends Shape {
@@ -5,7 +7,7 @@ public class Triangle extends Shape {
     private Point pointB;
     private Point pointC;
 
-    Triangle(Point pointA, Point pointB, Point pointC){
+    public Triangle(Point pointA, Point pointB, Point pointC){
         this.pointA = Objects.requireNonNull(pointA);
         this.pointB = Objects.requireNonNull(pointB);
         this.pointC = Objects.requireNonNull(pointC);
